@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #fff;
+    background-color: white;
 }
 
 header{
@@ -25,6 +25,14 @@ header{
    
     
 }
+
+ .banner{
+    background-image: url(../images/gift-mario.gif);
+    height: 850px;
+    
+    color: #fff;
+    text-align: left;
+ }
 nav ul{
     list-style: none;
     float: right;
@@ -99,4 +107,27 @@ section{
 }
 .check:checked::before{
     background: #00a1ff;
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.logos{
+    overflow: hidden;
+    padding: 60px 0;
+}
+.logos-slide{
+    white-space: nowrap;
+    animation: 20s slide infinite linear;
+}
+
+.logos-slide img {
+    height: 50px;
+    margin: 0 40px;
 }
