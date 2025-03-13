@@ -6,10 +6,6 @@
     font-size: 20px;
 }
 
-body{
-    background-color: white;
-}
-
 header{
     background-color: #333;
     display: flex;
@@ -22,17 +18,8 @@ header{
 .header .logo img {
     height: 70px;
     width: auto;
-   
-    
 }
 
- .banner{
-    background-image: url(../images/gift-mario.gif);
-    height: 850px;
-    
-    color: #fff;
-    text-align: left;
- }
 nav ul{
     list-style: none;
     float: right;
@@ -40,6 +27,7 @@ nav ul{
     padding: 0;
     display: flex;
 }
+
 nav ul li a{
    line-height: 80px;
    color: #fff;
@@ -49,27 +37,70 @@ nav ul li a{
    font-weight: bold;
    text-transform: uppercase;
 }
+
 nav ul li a:hover{
-    background: rgb(0, 0, 0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 6px;
 }
+
 section{
     width: 100%;
     height: 100vh;
-    background: url(fondo.png);
     background-size: cover;
     background-position: center;
 }
+
 .en {
    color: #fff;
    text-decoration: none;
    font-size: 14px;
    font-weight: bold;
    text-transform: uppercase;
-   
-   
-
 }
+
+.banner {
+    background-image: url("../images/gift-mario.gif");
+    background-size: cover; /* Ajusta el tamaño */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    height: 100vh; /* Ocupa toda la pantalla */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.banner .titulo {
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Organiza elementos en columna */
+    align-items: center; /* Centra elementos horizontalmente */
+    justify-content: center; /* Centra elementos verticalmente */
+    min-height: 90vh;
+    text-align: center;
+    max-width: 80%; /* Para evitar que el texto sea demasiado ancho */
+}
+
+.banner .titulo h1 {
+    font-size: 28px; /* Ajusta el tamaño del título */
+    max-width: 800px; /* Evita que el texto sea demasiado ancho */
+    margin-bottom: 15px; /* Espaciado entre título y botón */
+}
+
+.banner .boton {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 10px; /* Espaciado entre el título y el botón */
+}
+
+
 .es {
     color: #00a1ff;
     text-decoration: none;
@@ -109,6 +140,103 @@ section{
     background: #00a1ff;
 }
 
+ .logos{
+    overflow: hidden;
+    padding: 60px 0;
+    height: fit-content;
+    background-color: white;
+}
+.logos-slide{
+    white-space: nowrap;
+    animation: 20s slide infinite linear;
+    height: min-content;
+}
+
+.logos-slide img {
+    height: 70px;
+    margin: 0 40px;
+}
+
+.servicios {
+    background-image: url(../images/gift-Luigi.gif);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end; /* Alinea el formulario a la derecha */
+    align-items: center; /* Lo centra verticalmente */
+    padding-right: 50px; /* Ajusta la distancia del borde derecho */
+}
+
+/* Contenedor del formulario */
+.form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    text-align: center;
+}
+
+/* Contenedor de cada input */
+.grupo {
+    position: relative;
+    margin: 20px 0;
+}
+
+/* Input estilizado */
+.grupo input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid gray;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s;
+    background: transparent;
+}
+
+/* Efecto flotante */
+.grupo label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 16px;
+    color: gray;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+/* Cuando el input tiene contenido o está enfocado */
+.grupo input:focus ~ label,
+.grupo input:valid ~ label {
+    top: -10px;
+    font-size: 12px;
+    color: #8e2de2;
+}
+
+/* Botón estilizado */
+button {
+    background: linear-gradient(to right, #8e2de2, #ff416c);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+.servicios .form{
+    justify-self: center;
+}
+
+
+
 @keyframes slide{
     from{
         transform: translateX(0);
@@ -118,16 +246,186 @@ section{
     }
 }
 
-.logos{
-    overflow: hidden;
-    padding: 60px 0;
-}
-.logos-slide{
-    white-space: nowrap;
-    animation: 20s slide infinite linear;
+
+
+.soporte {
+    position: absolute;
+    top: 150px; /* Ajusta la altura */
+    left: 200px; /* Ajusta la posición horizontal */
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 180px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.logos-slide img {
-    height: 50px;
-    margin: 0 40px;
+.soporte h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
 }
+
+.soporte p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.soporte a {
+    display: inline-block;
+    background: #ff3b3b;
+    color: white;
+    padding: 8px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.soporte a:hover {
+    background: #ff6161;
+}
+.footer-fondo {
+    background-image: url(../images/compra.jpg);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Hace que los elementos hijos se posicionen sobre él */
+}
+.titulo-servicios {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.titulo-servicios {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.wrapper {
+    padding:10 px 10%;
+}
+#card-dota{
+    padding: 50px 0;
+}
+.box-dota {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px ;
+    margin-top: 50px;
+}
+.box{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0,0.5) ;
+}
+.box img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.overlay{
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #1c1c1c 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.overlay h3{
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-family: arial;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+.overlay a{
+    margin-top: 10px;
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 50px;
+    text-align: center;
+    
+}
+.boxLhover img{
+    transform: scale(1.2);
+}
+.box:hover .overlay{
+    height: 100%;
+}
+.container {
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+}
+.card {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 1px 10px rgb(0, 0, 0,0.2);
+    cursor: default;
+    transition:  all 400ms ease;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+.card img {
+    width: 100%;
+    height: 210px;
+}
+.card .contenido{
+    padding: 15px;
+    text-align: center;
+}
+.card .contenido p{
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+.card .contenido h3{
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #333;
+
+}
+.card .contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #2fb4cc;
+    border:1px solid #2fb4cc;
+    border-radius: 4px;
+    transition:  all 400ms ease;
+}
+.card .contenido a:hover{
+    background: #2fb4cc;
+    color: #333;
+
+}
+
